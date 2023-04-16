@@ -93,6 +93,24 @@ left: 40px;
         opacity: 1;
     }
 }
+
+@keyframes moveInBottom {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.btn-animated{
+    animation: moveInBottom 1s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
 .btn:link,
 .btn:visited{
 text-transform: uppercase;
@@ -127,7 +145,7 @@ box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     left: 0;
     z-index: -1;
     /* transition: all 0.4s; */
-    transition: all 4s;
+    transition: all 0.4s;
 }
 .btn-white::after{
     background-color: #fff;
