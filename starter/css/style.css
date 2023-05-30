@@ -13,7 +13,7 @@ Dark green: #28b485
     box-sizing: border-box;
 }
 html{
-    font-size:10px
+    font-size: 62.5%;
 }
 body{
     font-family: 'Lato', sans-serif;
@@ -124,6 +124,7 @@ display: inline-block;
 border-radius: 10rem;
 transition: all 0.2s;
 position: relative;
+font-size: 1.6rem;
 
 }
 .btn:hover{
