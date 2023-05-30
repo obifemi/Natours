@@ -171,15 +171,20 @@ box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
 $color-primary:#f9ed69;
 $color-secondary:#f08a5d;
 $color-tertiary:#b83b5e;
-nav {
-    margin:30px;
-    background-color: $color-primary;
-  
+
+@mixin clearfix {
   &::after{
   content:"";
   clear:both;
   display:table;
 }
+}
+
+
+nav {
+    margin:30px;
+    background-color: $color-primary;
+    @include clearfix
     }
 .navigation{
   list-style:none;
