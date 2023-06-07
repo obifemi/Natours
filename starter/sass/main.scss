@@ -1,11 +1,11 @@
-/*
-COLORS:
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
 
-*/
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-gray-dark: #777;
+$color-white: #fff;
+$color-black: #000;
 
 *,
 *::before,
@@ -20,7 +20,7 @@ html{
 body{
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    color: #777;
+    color: $color-gray-dark;
     line-height: 1.7;
     /* font-size: 16px; */
     box-sizing: border-box;
@@ -28,17 +28,19 @@ body{
 }
 .header{
     height: 95vh;
-    background-image: linear-gradient(to right bottom,#7ed56fcc, #28b485cc  ) ,url(../img/hero.jpg);
+    background: linear-gradient(to right bottom,rgba($color-primary-light,0.8), rgba($color-primary-dark,0.8)) ,url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
+
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
 }
-.header__logo-box{
-position: absolute;
-top: 4rem;
-left: 4rem;
-}
+
 .header__logo{
     height: 3.5rem;
 }
@@ -50,7 +52,7 @@ left: 4rem;
     text-align: center;
 }
 .heading-primary{
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
@@ -131,15 +133,15 @@ font-size: 1.6rem;
 }
 .btn:hover{
 transform: translateY(-0.3rem);
-box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+box-shadow: 0 1rem 2rem rgba($color-black,0.2);
 }
 .btn:active{
 transform: translateY(-0.1rem);
-box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+box-shadow: 0 0.5rem 1rem rgba($color-black,0.2);
 }
 .btn--white{
-    background-color: #fff;
-    color: #777;   
+    background-color: $color-white;
+    color: $color-gray-dark;   
 }
 .btn::after{
     content: '';
@@ -155,7 +157,7 @@ box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
     transition: all 0.4s;
 }
 .btn--white::after{
-    background-color: #fff;
+    background-color: $color-white;
 }
 .btn:hover::after{
     transform: scale(1.5);
